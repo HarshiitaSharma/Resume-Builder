@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <form id="editor" class="editor" autocomplete="off">
+    <header class="bar">
+      <h1>Resume Builder</h1>
+      <div class="actions">
+        <button type="button" id="sample" class="ghost">Load sample</button>
+        <button type="button" id="print">Download PDF</button>
+      </div>
+    </header>
+
+    <fieldset>
+      <legend>Basics</legend>
+      <label>Full name <input data-k="name"></label>
+      <label>Job title <input data-k="title"></label>
+      <div class="row">
+        <label>Email <input data-k="email" type="email"></label>
+        <label>Phone <input data-k="phone"></label>
+      </div>
+      <div class="row">
+        <label>Location <input data-k="location"></label>
+        <label>Website or LinkedIn <input data-k="link"></label>
+      </div>
+      <label>Summary <textarea data-k="summary" rows="4"></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Skills</legend>
+      <label>Separate with commas <textarea data-k="skills" rows="2"></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Experience</legend>
+      <div id="exp-list"></div>
+      <button type="button" class="ghost" data-add="exp">Add job</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Education</legend>
+      <div id="edu-list"></div>
+      <button type="button" class="ghost" data-add="edu">Add school</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Look</legend>
+      <div class="row">
+        <label>Layout
+          <select data-k="layout">
+            <option value="classic">Single column</option>
+            <option value="side">Sidebar</option>
+          </select>
+        </label>
+        <label>Accent color <input data-k="accent" type="color"></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <main class="stage"><article id="paper" class="paper"></article></main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
