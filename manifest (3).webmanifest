@@ -1,0 +1,10 @@
+{
+  "name": "Resume Builder",
+  "short_name": "Resume",
+  "description": "Build a resume in your browser and save it as a PDF",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#e9edf2",
+  "theme_color": "#17496b",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
